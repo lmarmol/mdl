@@ -1,0 +1,25 @@
+name: mdl
+version: "0.1.0"
+author: Leonardo Marmol <lmarmol@momentos.life>
+about: MDL (Momentos Downloader) is a CLI tool use to download Momentos contents.
+
+subcommands:
+  - login:
+      about: Logs into Momentos and stores credentials locally.
+      args:
+        - user:
+            short: u
+            long: user
+            takes_value: true
+            required: true
+            multiple: false
+  - list:
+      about: List Momentos contents for the logged user.
+  - download:
+      about: Download Momentos contents for the logged user.
+      args:
+        - id:
+            long: id
+            takes_value: true
+            multiple: true
+            required: true
